@@ -36,8 +36,9 @@ imax = 0
             # update largest element
             value_max = value 
 
-values = [2, 3, -1, 7, 4]
+#values = [2, 3, -1, 7, 4]
 
 i = argmax[values]
 print (f"index of max value: [i"]")
+return imax
 

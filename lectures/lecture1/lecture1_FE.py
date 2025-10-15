@@ -19,26 +19,33 @@ Tasks
     against NumPy's argmax().
 """
 
-def argmax(lst):
-
 import numpy as np
 
+def argmax(lst):
+    
     N = len(lst)
 
-value_max = - np.inf
-imax = 0 
+    if N == 0:
+        raise ValueError('Empty list are not supported')
 
-    for i in range (N)
-        value = lst(i)
+    value_max = - np.inf
+    imax = 0
+
+    for i in range (N):
+        value = lst [i]
         if value > value_max:
-            #update index largest element
-            imax = i 
-            # update largest element
-            value_max = value 
+            # Upadte index of largest element
+            imax = i
+            # Update the largest element
+            value_max = value
+    return imax
 
-#values = [2, 3, -1, 7, 4]
+if __name__ == '__main__':
+    values = [20, 3, -1, 7, 4]
+    # values = []
 
-i = argmax[values]
-print (f"index of max value: [i"]")
-return imax
-
+    try:
+        i = argmax(values)    
+        print(f"Index of max value: {i}")
+    except ValueError:
+        print("Empty list")
